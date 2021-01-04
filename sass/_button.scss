@@ -1,0 +1,47 @@
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    font-size: .8rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all .2s;
+    outline: 0;
+    font-family: $font-primary;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    /* &:hover {
+        opacity: .7;
+        transform: translateY(-2px);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+    } */
+
+    &--primary {
+        background-color: transparent;
+        color: $very-light-gray;
+        border-color: $very-light-gray;
+        filter: brightness(80%);
+
+        &:hover {
+            background-color: $very-light-gray;
+            color: $dark-violet;
+            filter: brightness(100%);
+        }   
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $dark-violet;
+        border-color: $dark-violet;
+
+        &:hover {
+            background-color: $dark-violet;
+            color: $very-light-gray;
+        }
+    }
+}

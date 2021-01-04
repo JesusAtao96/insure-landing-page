@@ -1,0 +1,61 @@
+// COLOR VARIABLES
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+$white: #fff;
+$black: #000;
+
+// FONT VARIABLES
+$font-primary: 'Karla', sans-serif;
+$font-heading: 'DM Serif Display', serif;
+
+// Responsive Breakpoints -> 1em = 16px
+$bp-large: 62.5em; // 1000px / 16px = 62.5
+$bp-medium: 50em; // 800px / 16px = 50
+$bp-small: 37.5em; // 600px / 16px = 37.5
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 97%;
+    }
+}
+
+body {
+    background-color: $very-light-gray;
+    color: $very-dark-violet;
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 75px calc(100vh - 75px) min-content min-content min-content;
+    grid-template-columns: [full-start] 1fr [center-start] minmax(1000px, 1fr) [center-end] 1fr [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: [full-start] 70px [center-start] 1fr [center-end] 70px [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 75px 1000px min-content min-content min-content;
+        grid-template-columns: [full-start] 50px [center-start] 1fr [center-end] 50px [full-end];
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: [full-start] 20px [center-start] 1fr [center-end] 20px [full-end];
+    }
+}
