@@ -1,5 +1,7 @@
 .different {
     grid-column: center-start / center-end;
+    margin-top: 50px;
+
 
     @media only screen and (max-width: $bp-medium) {
         margin-top: 100px;

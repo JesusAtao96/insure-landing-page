@@ -309,7 +309,8 @@ body {
         background-position: center center; } }
 
 .different {
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin-top: 50px; }
   @media only screen and (max-width: 50em) {
     .different {
       margin-top: 100px; } }
