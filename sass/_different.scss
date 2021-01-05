@@ -1,3 +1,75 @@
 .different {
     grid-column: center-start / center-end;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 100px;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-family: $font-heading;
+        font-weight: 400;
+        padding-top: 50px;
+        margin-bottom: 60px;
+        position: relative;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2.5rem;
+            padding-top: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        &::before {
+            content: '';
+            width: 125px;
+            height: 2px;
+            background-color: $dark-grayish-violet;
+            filter: brightness(150%);
+            position: absolute;
+            top: 0;
+            left: 0;
+    
+            @media only screen and (max-width: $bp-medium) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 50px;
+        }
+    }
+
+    &__option {
+        max-width: 315px;
+        width: 100%;
+
+        @media only screen and (max-width: $bp-medium) {
+            max-width: 282px;
+            width: 90%;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-family: $font-heading;
+        color: $very-dark-violet;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-size: .9rem;
+    }
 }

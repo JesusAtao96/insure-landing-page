@@ -1,3 +1,43 @@
 .find {
     grid-column: center-start / center-end;
+    margin-top: 150px;
+    margin-bottom: 130px;
+    background-color: $dark-violet;
+    background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 90px;
+
+    @media only screen and (max-width: $bp-medium) {
+        background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    &__text {
+        font-family: $font-heading;
+        font-size: 3rem;
+        font-weight: 400;
+        color: $very-light-gray;
+        line-height: 1;
+        max-width: 420px;
+        width: 90%;
+
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__btn {
+        margin: 20px 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 40px 0 0 0;
+        }
+    }
 }
